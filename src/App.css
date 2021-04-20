@@ -1,38 +1,95 @@
+body {
+	background: rgb(4, 32, 48);
+	background: linear-gradient(90deg, rgba(4, 32, 48, 1) 0%, rgba(254, 234, 195, 1) 26%, rgba(0, 212, 255, 1) 100%);
+}
+
 .App {
-  text-align: center;
+	border-radius: 5px;
+	border: 2px solid;
+	padding: 20px 20px;
+	margin: 150px auto;
+	width: 500px;
+	min-height: 400px;
+	text-align: center;
+	background-color: rgb(197 175 218 / 58%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App ol {
+	font-size: 21px;
+	list-style-type: upper-roman;
+	font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Add task area */
+
+.addTaskBar {
+	border-radius: 10px;
+	background-color: rgb(187 78 78 / 82%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addTaskBar input {
+	margin: 10px auto;
+	border: 0;
+	border-radius: 20px;
+	padding: 0 15px;
+	height: 50px;
+	width: 300px;
+	font-size: 20px;
+	background-color: rgb(183 250 255 / 78%);
+	color: rgb(4 32 48);
 }
 
-.App-link {
-  color: #61dafb;
+.addTaskBar input::placeholder {
+	color: rgb(87, 79, 50);
+}
+.addTaskBar input:focus,
+button:focus,
+.newTask input {
+	outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addTaskBar button {
+	border: 0;
+	background-color: #ffabab;
+	margin-left: 24px;
+	height: 50px;
+	width: 80px;
+	border-radius: 25px;
+	box-shadow: 1px 2px 0px black;
+	font-weight: 500;
+	font-size: 19px;
+}
+
+/* Created tasks */
+
+.newTask {
+	padding: 20px;
+	margin: 20px auto;
+	line-height: 20px;
+	background-color: #87e492;
+	border-radius: 7px;
+	min-height: 20px;
+	font-size: 20px;
+	text-align: left;
+}
+
+.newTask input {
+	margin: -10px 0px;
+	border: 0;
+	border-radius: 20px;
+	padding: 5px 15px;
+	width: 250px;
+	font-size: 20px;
+	background-color: rgb(183 250 255 / 78%);
+	color: rgb(4 32 48);
+}
+
+.newTask img {
+	float: right;
+	margin: -5px 10px 0 0;
+	width: 30px;
+}
+
+.taskComplete {
+	text-decoration: line-through;
 }
